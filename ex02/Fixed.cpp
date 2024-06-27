@@ -57,7 +57,6 @@ bool Fixed::operator!=(const Fixed& value) const { return _value != value._value
 
 Fixed& Fixed::operator+(const Fixed& value) {
     _value += value._value;
-    std::cout << "value: " << value._value << std::endl;
     return *this;
 }
 
@@ -67,7 +66,6 @@ Fixed& Fixed::operator-(const Fixed& value) {
 }
 
 Fixed& Fixed::operator*(const Fixed& value) {
-    std::cout << "value: " << value._value << std::endl;
     _value = (_value * value._value) >> fractionnal_bits;
     return *this;
 }
